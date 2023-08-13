@@ -1,0 +1,19 @@
+{% extends 'header.html' %}
+
+{% block title %}Angle vs Time{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+<div class = "heading">
+    <h1>Angle vs Time</h1>
+</div>
+
+<center>
+    {% if svg_graph %}
+        {{svg_graph|safe}}
+    {% endif %}
+</center>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends 'header.html' %}
+
+{% block title %}Kepler's Third Law Correlation{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+<div class = "heading">
+    <h1>Kepler's Third Law Correlation</h1>
+</div>
+
+<center>
+    {% if svg_graph %}
+        {{svg_graph|safe}}
+    {% endif %}
+</center>
+
+{% endblock content %}

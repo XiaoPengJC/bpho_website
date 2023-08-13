@@ -1,0 +1,235 @@
+/* Add a black background color to the top navigation */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding : 0px;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 12vh;
+    background-color: white;
+    border-bottom: 1px solid #d3d3d3;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.heading {
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.heading h1 {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+    color: black;
+    letter-spacing: 5px;
+    margin: 50px;
+}
+
+.heading img {
+    width: 190px;
+    height: 50px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 16px;
+}
+
+.nav-links li a:hover:not(.active) {
+    background-color: #EEA47F;
+    color: white;
+}
+
+.nav-links li a.active {
+    background-color: #00539C;
+    color: white;
+}
+
+.card {
+    height: 300px;
+    width: 45%;
+    color: white;
+    background-color: #8AAAE5;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+    padding-right: 50px;
+}
+
+.card h2 {
+    text-transform: uppercase;
+}
+
+.card p {
+    visibility: hidden;
+    display: none;
+    margin: none;
+    text-transform: none;
+}
+
+.card:hover p {
+    visibility: visible;
+    display: flex;
+}
+
+.card:hover h2 {
+    visibility: hidden;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+}
+
+.kepler{
+    text-align: center;
+}
+
+.input_planets{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet:not(img) {
+    display: grid;
+    margin: 30px;
+    background-color: #8AAAE5;
+    border-radius: 10px;
+    text-align: center;
+    height: 150px;
+    width: 170px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.checkbox, .radio {
+    display: none;
+}
+
+.checkbox:checked + .planet {
+    outline: 3px solid black;
+}
+
+.radio:checked + .planet {
+    outline: 3px solid black;
+}
+
+.submit-container {
+    width: 100%;
+    margin: 50px;
+    display: block;
+    text-align: center;
+}
+
+.submit {
+    height: 50px;
+    width: 25%;
+    background-color: #8AAAE5;
+    border-radius: 10px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    border: none;
+    
+}
+
+.planet_img {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 50px;
+    margin: auto;
+    display: block;
+    justify-content: top;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.input_planets .inner_outer_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.select_btn {
+    height: 50px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    border: solid 1px black;
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.is_3D_orbit_container {
+    margin-top: 50px;
+    padding: 10px;
+    width: 100%;
+}
+
+.is_3D_orbit {
+    display: flex;
+    text-align: center;
+    height: 50px;
+    width: 25%;
+    background-color: #8AAAE5;
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 5px;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.checkbox:checked + .is_3D_orbit {
+    outline: 3px solid black;
+}

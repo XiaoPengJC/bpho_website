@@ -1,0 +1,49 @@
+{% extends 'header.html' %}
+{% block title %}AstroVerse{% endblock title %}
+
+{% block content %}
+
+<div class = "gallery">
+    <div class = "card" onclick = "location.href = 'task-one/'">
+        <h2>Task One</h2>
+        <p>Using Solar System parameters, verify that the square of orbital period is proportional to the cube 
+            of the orbital semi-major axis. If units of years for time and Astronomical Units (AU) for distance are used, 
+            show that the constant of proportionality is very
+            close to unity for the Solar System.</p>
+    </div>
+    <div class = "card" onclick = "location.href = 'task-two/'">
+        <h2>Task Two</h2>
+        <p>Compute and accurately plot elliptical orbits of the five inner planets. 
+            Then (using a larger scale), plot the outer planet orbits.</p>
+    </div>
+    <div class = "card" onclick = "location.href = 'task-three/'">
+        <h2>Task Three</h2>
+        <p>Create a 2D animation of the orbits of the planets.</p>
+    </div>
+    <div class = "card" onclick = "location.href = 'task-four/'">
+        <h2>Task Four</h2>
+        <p>Use the inclination angle value  and hence plot 3D orbit animations of the planets. 
+            Do include the dwarf planet Pluto, as it is off the plane of the ecliptic much more than the other planets.</p>
+    </div>
+    <div class = "card" onclick = "location.href = 'task-five/'">
+        <h2>Task Five</h2>
+        <p>Use Simpson's numeric integration method to determine how orbital time varies with polar angle. 
+            Hence code-up a function which outputs orbit polar angle from orbit time. Update your models with this function, 
+            and contrast how polar angle varies with time for Pluto, compared to a circular motion example with the same 248.348 
+            year period.</p>
+    </div>
+    <div class = "card" onclick = "location.href = 'task-six/'">
+        <h2>Task Six</h2>
+        <p>Choose a pair of planets and determine their orbits vs
+            time. At fixed time intervals, draw a line between the planets and plot their positions. 
+            Keep going for 10 orbits of the outermost planet.</p>
+    </div>
+    <div class = "card" onclick = "location.href = 'task-seven/'">
+        <h2>Task Seven</h2>
+        <p>Use your orbital models to plot the orbits of the other bodies in the solar system, with a chosen object 
+            (e.g. Earth) at a fixed position at the origin of a Cartesian coordinate system. i.e. choose a coordinate system 
+            where your chosen object is at (0,0,0).</p>
+    </div>
+</div>
+
+{% endblock content %}

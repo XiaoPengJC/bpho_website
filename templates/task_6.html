@@ -1,0 +1,79 @@
+{% extends 'header.html' %}
+
+{% block title %}Spirograph{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+<div class = "heading">
+    <h1>Spirograph</h1>
+</div>
+
+<center>
+    <p>Choose exactly two planets</p>
+</center>
+
+<form class = "input_planets">
+
+    <div>
+        <input type="checkbox" id="mercury" name="mercury" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="mercury" class = "planet"><img src = "/static/images/mercury.png" class = "planet_img">MERCURY</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="venus" name="venus" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="venus" class = "planet"><img src = "/static/images/venus.png" class = "planet_img">VENUS</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="earth" name="earth" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="earth" class = "planet"><img src = "/static/images/earth.png" class = "planet_img">EARTH</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="mars" name="mars" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="mars" class = "planet"><img src = "/static/images/mars.png" class = "planet_img">MARS</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="jupiter" name="jupiter" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="jupiter" class = "planet"><img src = "/static/images/jupiter.png" class = "planet_img">JUPITER</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="saturn" name="saturn" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="saturn" class = "planet"><img src = "/static/images/saturn.png" class = "planet_img">SATURN</label>
+    </div>
+    
+    <div>
+        <input type="checkbox" id="uranus" name="uranus" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="uranus" class = "planet"><img src = "/static/images/uranus.png" class = "planet_img">URANUS</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="neptune" name="neptune" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="neptune" class = "planet"><img src = "/static/images/neptune.png" class = "planet_img">NEPTUNE</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="pluto" name="pluto" class = "checkbox" onclick = "return limit_planet_inputs(this, 2)">
+        <label for="pluto" class = "planet"><img src = "/static/images/pluto.png" class = "planet_img">PLUTO</label>
+    </div>
+
+    <div class = "submit-container">
+        <input type="submit" class="submit" value="COMPUTE" style="font-family: 'Monserrat', sans-serif;">
+    </div>
+
+</form>
+
+<center>
+    {% if anim_graph %}
+        <img src = "data:image/gif;base64,{{ anim_graph|safe }}" alt = "graph" class = "graph">
+    {% endif %}
+    {% if svg_graph %}
+        {{svg_graph|safe}}
+    {% endif %}
+</center>
+
+{% endblock content %}

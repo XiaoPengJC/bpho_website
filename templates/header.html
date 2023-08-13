@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="icon" type="image/x-icon" href="/static/images/logo_a.png">
+		<link rel="stylesheet" href="/static/css/style.css">
+        <script src="/static/js/rules.js"></script>
+        <title>{% block title %}AstroVerse{% endblock title %}</title>
+	</head>
+	<body>
+		<nav>
+            <div class = "heading">
+                <img src = "/static/images/logo_main.png" alt = "logo" onclick = "location.href = '/'">
+            </div>
+            <ul class = "nav-links">
+                <li><a class = "active" href = '/'>Home</a></li>
+                <li><a href = 'https://www.bpho.org.uk/bpho/computational-challenge/'>BPhO</a></li>
+                <li><a href = 'https://drive.google.com/file/d/1pdZHSbjhjytrhj2OxqMGdHE1kPKW_Zta/view?usp=sharing'> Report Paper</a></li>
+            </ul>
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+	</body>
+</html>

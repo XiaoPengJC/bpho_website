@@ -1,0 +1,131 @@
+{% extends 'header.html' %}
+
+{% block title %}Imaginary Orbit{% endblock title %}
+
+{% load static %}
+
+{% block content %}
+
+<div class = "heading">
+    <h1>Imaginary Orbit</h1>
+</div>
+
+<form class = "input_planets">
+
+    <div class = "inner_outer_header">
+        <h2>Select the planet at the centre</h2>
+    </div>
+
+    <div>
+        <input type="radio" id="mercury_radio" name="planet" value = "mercury" class = "radio">
+        <label for="mercury_radio" class = "planet"><img src = "/static/images/mercury.png" class = "planet_img">MERCURY</label>
+    </div>
+
+    <div>
+        <input type="radio" id="venus_radio" name="planet" value = "venus" class = "radio">
+        <label for="venus_radio" class = "planet"><img src = "/static/images/venus.png" class = "planet_img">VENUS</label>
+    </div>
+
+    <div>
+        <input type="radio" id="earth_radio" name="planet" value = "earth" class = "radio">
+        <label for="earth_radio" class = "planet"><img src = "/static/images/earth.png" class = "planet_img">EARTH</label>
+    </div>
+
+    <div>
+        <input type="radio" id="mars_radio" name="planet" value = "mars" class = "radio">
+        <label for="mars_radio" class = "planet"><img src = "/static/images/mars.png" class = "planet_img">MARS</label>
+    </div>
+
+    <div>
+        <input type="radio" id="jupiter_radio" name="planet" value = "jupiter" class = "radio">
+        <label for="jupiter_radio" class = "planet"><img src = "/static/images/jupiter.png" class = "planet_img">JUPITER</label>
+    </div>
+
+    <div>
+        <input type="radio" id="saturn_radio" name="planet" value = "saturn" class = "radio">
+        <label for="saturn_radio" class = "planet"><img src = "/static/images/saturn.png" class = "planet_img">SATURN</label>
+    </div>
+    
+    <div>
+        <input type="radio" id="uranus_radio" name="planet" value = "uranus" class = "radio">
+        <label for="uranus_radio" class = "planet"><img src = "/static/images/uranus.png" class = "planet_img">URANUS</label>
+    </div>
+
+    <div>
+        <input type="radio" id="neptune_radio" name="planet" value = "neptune" class = "radio">
+        <label for="neptune_radio" class = "planet"><img src = "/static/images/neptune.png" class = "planet_img">NEPTUNE</label>
+    </div>
+
+    <div>
+        <input type="radio" id="pluto_radio" name="planet" value = "pluto" class = "radio">
+        <label for="pluto_radio" class = "planet"><img src = "/static/images/pluto.png" class = "planet_img">PLUTO</label>
+    </div>
+
+    <div class = "inner_outer_header">
+        <h2>Select the planets around the centre</h2>
+        <button type = "button" class = "select_btn all" onclick="select_deselect_all(this)">Select All</button>
+    </div>
+
+    <div>
+        <input type="checkbox" id="mercury" name="mercury" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="mercury" class = "planet"><img src = "/static/images/mercury.png" class = "planet_img">MERCURY</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="venus" name="venus" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="venus" class = "planet"><img src = "/static/images/venus.png" class = "planet_img">VENUS</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="earth" name="earth" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="earth" class = "planet"><img src = "/static/images/earth.png" class = "planet_img">EARTH</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="mars" name="mars" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="mars" class = "planet"><img src = "/static/images/mars.png" class = "planet_img">MARS</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="jupiter" name="jupiter" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="jupiter" class = "planet"><img src = "/static/images/jupiter.png" class = "planet_img">JUPITER</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="saturn" name="saturn" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="saturn" class = "planet"><img src = "/static/images/saturn.png" class = "planet_img">SATURN</label>
+    </div>
+    
+    <div>
+        <input type="checkbox" id="uranus" name="uranus" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="uranus" class = "planet"><img src = "/static/images/uranus.png" class = "planet_img">URANUS</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="neptune" name="neptune" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="neptune" class = "planet"><img src = "/static/images/neptune.png" class = "planet_img">NEPTUNE</label>
+    </div>
+
+    <div>
+        <input type="checkbox" id="pluto" name="pluto" class = "checkbox" onclick = "return change_select_btn(this)">
+        <label for="pluto" class = "planet"><img src = "/static/images/pluto.png" class = "planet_img">PLUTO</label>
+    </div>
+
+    <div class = "is_3D_orbit_container">
+        <input type = "checkbox" id = "is_3D_orbit" name = "is_3D_orbit" class = "checkbox">
+        <label for = "is_3D_orbit" class = "is_3D_orbit">3D Orbit</label>
+    </div>
+
+    <div class = "submit-container">
+        <input type="submit" class="submit" value="COMPUTE" style="font-family: 'Monserrat', sans-serif;">
+    </div>
+
+</form>
+
+{% if svg_graph %}
+    <center>
+        {{svg_graph|safe}}
+    </center>
+{% endif %}
+
+{% endblock content %}
